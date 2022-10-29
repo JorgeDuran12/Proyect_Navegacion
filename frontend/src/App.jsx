@@ -13,8 +13,8 @@ import AcercaDe from './pages/AcercaDe';
 import Registro from './pages/Registro';
 import Contactos from './pages/Contactos';
 import OlvideClave from './pages/OlvideClave';
-
-function App() {
+import '../src/assets/css/index.css';
+function App() {  
  
 
   return (
