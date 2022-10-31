@@ -1,34 +1,41 @@
 import { NavLink } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
 
 
 const Login = () => {
   return (
-    
 
-    <div className='one'> 
+    <div className='padre'>
 
-        <label className='title'>Login</label>
-        <div className='btn-text'> 
-          <TextField sx={{margin:3, borderRadius:3}} type={'text'} id="filled-basic" label="Usuario" variant="outlined" />
-          <TextField sx={{margin:3, borderRadius:3}} type={'password'} id="filled-basic" label="Contraseña" variant="outlined" />
-          <Button sx={{margin:6, borderRadius:3}} variant="contained" href="#contained-buttons"> Link </Button>
-            
-              <div>
-                  <NavLink to="/registro">
-                    Registrate
-                  </NavLink>
-              </div>
-              <div> 
-                  <NavLink to="/olvide-clave">
-                    Olvidaste la contraseña
-                  </NavLink>
-              </div>
+        <h1>Login</h1>
 
-        </div>
-    </div>
+        <form method="post">
+ 
+          <label htmlFor="usuario">Usuario</label>
+          <input type="text" required />
 
+          <label htmlFor='pass'>Contraseña</label>
+          <input type="password" required></input>
+
+          <NavLink to="/olvide-clave">
+                Olvidaste la contraseña?
+          </NavLink>
+
+          <input type="submit" value="Ingresar" />
+
+              <NavLink to="/registro">
+                Registrate
+              </NavLink>
+      
+              
+        
+
+
+        </form>
+
+      </div>
+
+               
   )
 }
 
