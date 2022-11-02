@@ -1,15 +1,21 @@
 import { NavLink } from 'react-router-dom';
-import TextField from '@mui/material/TextField';
 
 
 const Login = () => {
+
+  const Submit = (e) => {
+    e.preventDefault();
+
+  }
+
   return (
 
-    <div className='padre'>
+    <div id='padre'>
+    
 
         <h1>Login</h1>
 
-        <form method="post">
+        <form method='post'>
  
           <label htmlFor="usuario">Usuario</label>
           <input type="text" required />
@@ -17,16 +23,22 @@ const Login = () => {
           <label htmlFor='pass'>Contraseña</label>
           <input type="password" required></input>
 
-          <NavLink to="/olvide-clave">
-                Olvidaste la contraseña?
-          </NavLink>
-
-          <input type="submit" value="Ingresar" />
-
-              <NavLink to="/registro">
-                Registrate
+          <div id='nv-pass'>
+              <NavLink to="/olvide-clave" className="nv-pass">
+                    Olvidaste la contraseña?
               </NavLink>
-      
+          </div>
+
+          <div id='btn'>
+              <button type='submit' onClick={Submit}>Ingresar</button>
+          </div>
+         
+          <div id='nv-register'>
+              <NavLink to="/registro" className="nv-register">
+                ¿No tienes cuenta? Registrate
+              </NavLink>
+          </div>
+  
               
         
 
